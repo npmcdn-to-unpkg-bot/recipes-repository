@@ -221,7 +221,7 @@ body a{
 .sb-search.sb-search-open .sb-search-submit,.no-js .sb-search .sb-search-submit {
 	z-index: 90;
 }
-/********** Login *************/
+/********** login *************/
 #loginContainer {
     position:relative;
     background:#0F1B2E;
@@ -248,14 +248,14 @@ body a{
 	font-size: 0.85em;
 }
 
-/* Login Button */
+/* login Button */
 #loginButton { 
     display:inline-block;  
     position:relative;
     z-index:30;
     cursor:pointer;
 }
-/* Login Box */
+/* login Box */
 #loginBox {
     position:absolute;
 	top:81px;
@@ -272,7 +272,7 @@ body a{
 	border-right:10px solid rgba(0, 0, 0, 0);
 	border-bottom: 10px solid #f0f0f0;
 }
-/* Login Form */
+/* login Form */
 #loginForm {
 	width: 451px;
 	background: #fff;

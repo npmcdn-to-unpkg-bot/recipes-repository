@@ -1,53 +1,21 @@
 import { Component } from 'angular2/core';
-import { SearchComponent } from './header-page/search/search.component';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 import { HeaderPageComponent } from './header-page/header-page.component';
-import { RecommendReceiptService } from './recommend-receip/recommend-receip.service';
-//import { DashboardComponent } from './dashboard.component';
-import { RecommendReceiptComponent } from './recommend-receip/recommend-receip.component';
-import { RecommendListComponent } from './recommend-list/recommend-list.component';
-//import { HeroDetailComponent } from './hero-detail.component';
 
-import { RecommendListComponent } from './recommend-list/recommend-list.component';
-import {ROUTER_DIRECTIVES, RouteConfig, Route, Router, RouterOutlet, ROUTER_PROVIDERS} from 'angular2/router';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'js/app/app.component.html',
-    directives: [ROUTER_DIRECTIVES],
-    providers: [
-        ROUTER_PROVIDERS
-    ]
+    directives: [ HeaderPageComponent ]
 
 })
 @RouteConfig([
-    new Route({ path: '/Home', component: RecommendListComponent, name: 'Home' }),
-    /*{
+    {
         path: '/',
-        name: 'Home',
-        component: HeaderPageComponent,
-        useAsDefault: true
-    },
-    {
-        path: '/login',
-        name : 'Login',
-        component: ''
+        name: 'index'
+        //component: DashboardComponent,
+        //useAsDefault: true
     }
-    /*{
-        path: '/advancesearch',
-        name: 'AdvanceSearch',
-        component: ''
-    },*/
-    /*,
-    {
-        path: '/detail/:id',
-        name: 'HeroDetail',
-        component: HeroDetailComponent
-    },
-    {
-        path: '/heroes',
-        name: 'Heroes',
-        component: HeroesComponent
-    }*/
 ])
 export class AppComponent {
     title = 'Pagina principal';

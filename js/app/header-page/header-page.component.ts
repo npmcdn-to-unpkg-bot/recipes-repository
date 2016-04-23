@@ -1,22 +1,21 @@
-/*import {Component, Input, Output} from 'angular2/core';
-import { Router } from 'angular2/router';
-import { SearchComponent } from './search/search.component';*/
-
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 import { SearchComponent } from './search/search.component';
-
+import { SubmenuComponent } from './submenu/submenu.component';
 @Component({
     selector: 'my-header-page',
-    templateUrl: './header-page/header-page.component.html',
-    injectables: [SearchComponent]
-    //directives: [SearchComponent]
+    templateUrl: './js/app/header-page/header-page.component.html',
+    directives: [ SearchComponent, SubmenuComponent ]
 })
 
 //export class HeaderPageComponent {
-export class HeaderPageComponent implements OnInit {
-    selectedAdvanceSearch: Boolean;
+export class HeaderPageComponent {
+    //selectedAdvanceSearch: Boolean;
 
+    constructor(){
+        console.log('hola');
+    }
+/*
     constructor(private _router: Router){
         console.log('hola');
     }
@@ -32,7 +31,7 @@ export class HeaderPageComponent implements OnInit {
     }
 
     gotoLogin() {
-        this._router.navigate(['Login', {}]);
+        this._router.navigate(['login', {}]);
     }
     gotoHome() {
         this._router.navigate(['Home', {}]);

@@ -1,17 +1,18 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component} from 'angular2/core';
 import { Router } from 'angular2/router';
-import { SubmenuComponent } from './submenu.component';
 
 @Component({
     selector: 'my-submenu',
-    templateUrl: 'js/app/components/submenu/submenu.component.html'
+    templateUrl: './js/app/header-page/submenu/submenu.component.html'
 })
 
-export class SubmenuComponent implements OnInit {
+export class SubmenuComponent {
 
-    constructor(
-        private _router: Router
-    OnInit(){
+    constructor(){
+        console.log('submenu');
+    }
+
+   /* OnInit(){
     }
 
     gotoNovedad() {
@@ -24,5 +25,5 @@ export class SubmenuComponent implements OnInit {
 
     gotoTendencia() {
         this._router.navigate(['Tendencia', {}]);
-    }
+    }*/
 }

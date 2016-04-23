@@ -20,7 +20,7 @@ $('#cssmenu > ul > li > a').click(function() {
 });
 
 
-// Login Form
+// login Form
 $(function() {
     var button = $('#loginButton');
     var box = $('#loginBox');

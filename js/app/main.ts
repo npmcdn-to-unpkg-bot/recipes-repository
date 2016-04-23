@@ -1,9 +1,10 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {HTTP_PROVIDERS} from 'angular2/http';
-import {AppComponent} from './app.component';
-import {enableProdMode} from 'angular2/core';
-import { RootRouter } from 'angular2/src/router/router';
-import { Router } from 'angular2/router';
+import { bootstrap }    from 'angular2/platform/browser';
+import { AppComponent } from './app.component';
 
-enableProdMode();
 bootstrap(AppComponent);
+
+/*
+ Copyright 2016 Google Inc. All Rights Reserved.
+ Use of this source code is governed by an MIT-style license that
+ can be found in the LICENSE file at http://angular.io/license
+ */

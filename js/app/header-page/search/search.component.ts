@@ -1,24 +1,14 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component} from 'angular2/core';
 import { Router } from 'angular2/router';
 
 @Component({
     selector: 'my-search',
-    templateUrl: './search/search.component.html'
+    templateUrl: './js/app/header-page/search/search.component.html'
 })
 
-export class SearchComponent implements OnInit {
-    selectedAdvanceSearch: Boolean;
+export class SearchComponent {
 
-    constructor(
-        private _router: Router
-    //private _heroService: HeroService) { }
-    OnInit(){
-        this.selectedAdvanceSearch = false;
-    }
-    Submit() {
-        //this._router.navigate(['Login', {}]);
-    }
-    AdvanceSubmit() {
-        //this._router.navigate(['Home', {}]);
+    constructor(){
+        console.log('search');
     }
 }
