@@ -1,20 +1,24 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+
 import { HeaderPageComponent } from './header-page/header-page.component';
+import { RecommendListComponent } from './recommend-list/recommend-list.component';
 
 
 @Component({
     selector: 'my-app',
     templateUrl: 'js/app/app.component.html',
-    directives: [ HeaderPageComponent ]
-
+    directives: [ HeaderPageComponent ],
+    providers: [
+        ROUTER_PROVIDERS
+    ]
 })
 @RouteConfig([
     {
         path: '/',
-        name: 'index'
-        //component: DashboardComponent,
-        //useAsDefault: true
+        name: 'index',
+        component: RecommendListComponent,
+        useAsDefault: true
     }
 ])
 export class AppComponent {

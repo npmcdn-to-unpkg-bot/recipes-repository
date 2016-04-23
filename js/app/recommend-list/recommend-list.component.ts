@@ -1,33 +1,39 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
-import { SearchComponent } from './search/search.component';
-import { HeaderPageComponent } from './header-page/header-page';
+
+import { RecommendReceiptService } from './recommend-list.service';
+import { RecommendList } from './recommend-list';
 
 
 @Component({
     selector: 'my-recommend-list',
-    templateUrl: './recommend-list/recommend-list.component.html'
+    templateUrl: './js/app/recommend-list/recommend-list.component.html'
 })
 
 export class RecommendListComponent implements OnInit {
-    recommend: RecommendReceipt[];
-    selected_receipt: RecommendReceipt;
+/*    recommend: RecommendReceipt[];
+    selected_receipt: RecommendReceipt;*/
 
-    constructor(
-        private _router: Router,
-        private _recommendReceiptService: RecommendReceiptService) { }
+    constructor(){
+        private _router: Router;
+        private _recommendReceiptService: RecommendReceiptService;
+    }
 
-    ngOnInit() {
+    /*ngOnInit() {
+        this.getRecommendReceipts();
+    }*/
+
+    this.$onInit = function() {
         this.getRecommendReceipts();
     }
 
-    getRecommendReceipts() {
+    this.getRecommendReceipts = function() {
         this._recommendReceiptService.getRecommendReceipts().then(recommend => this.recommend = recommend);
     }
 
-    onSelectReceipt(receipt: RecommendReceipt) { this.selected_receipt = receipt; }
+    this.onSelectReceipt = function(receipt: RecommendReceipt) { this.selected_receipt = receipt; }
 
-    gotoDetailReceipt() {
+    this.gotoDetailReceipt = function() {
         this._router.navigate(['ReceiptDetail', { id: this.selected_receipt.id }]);
     }
 }
